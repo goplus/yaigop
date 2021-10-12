@@ -75,7 +75,7 @@ func runCmd(cmd *base.Command, args []string) {
 	if *flagAsm {
 		panic("not impl")
 	}
-	it.RunExpr1(app)
+	it.RunExpr(app)
 }
 
 // -----------------------------------------------------------------------------
