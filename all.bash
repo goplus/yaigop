@@ -1,0 +1,3 @@
+set -e
+
+go install -tags gomacro -v ./...
