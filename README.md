@@ -11,11 +11,12 @@ igop - The Go+ interpreter (still in beta version)
 
 * [yaegi](https://github.com/traefik/yaegi)
 * [gomacro](https://github.com/cosmos72/gomacro)
+* [igo](https://github.com/goplus/igo)
 
 ## How to build
 
 ```bash
 git clone git@github.com:goplus/igop.git
 cd igop
-go install -tags yaegi -v ./...   # you can replace `yaegi` to `gomacro` or other engines
+go install -tags yaegi -v ./...   # you can replace `yaegi` to `igo` or other engines
 ```
