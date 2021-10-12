@@ -21,8 +21,6 @@ import (
 
 	"github.com/goplus/igop/cmd/igop/internal/base"
 	"github.com/goplus/igop/cmd/igop/internal/run"
-
-	_ "github.com/goplus/igop/cmd/igop/internal/lib"
 )
 
 func main() {

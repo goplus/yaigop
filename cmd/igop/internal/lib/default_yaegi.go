@@ -1,5 +1,5 @@
-//go:build gomacro
-// +build gomacro
+//go:build yaegi
+// +build yaegi
 
 /*
  Copyright 2021 The GoPlus Authors (goplus.org)
@@ -17,28 +17,12 @@
  limitations under the License.
 */
 
-package run
+package lib
 
 import (
-	"github.com/cosmos72/gomacro/fast"
-	"github.com/goplus/igop"
-	"github.com/qiniu/x/log"
-
-	_ "github.com/goplus/igop/cmd/igop/internal/lib"
+	"reflect"
 )
 
-// -----------------------------------------------------------------------------
-
-func runDir(srcDir string, asm bool) {
-	it := fast.New()
-	app, err := igop.CompileDir(it, srcDir)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	if asm {
-		panic("not impl")
-	}
-	it.RunExpr(app)
-}
-
-// -----------------------------------------------------------------------------
+var (
+	Symbols = map[string]map[string]reflect.Value{}
+)
