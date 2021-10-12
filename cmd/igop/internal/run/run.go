@@ -18,9 +18,12 @@
 package run
 
 import (
+	"fmt"
 	"os"
+	"runtime"
 
 	"github.com/cosmos72/gomacro/fast"
+	"github.com/goplus/gop"
 	"github.com/goplus/igop"
 	"github.com/goplus/igop/cmd/igop/internal/base"
 	"github.com/qiniu/x/log"
@@ -30,15 +33,16 @@ import (
 
 // Cmd - igop run
 var Cmd = &base.Command{
-	UsageLine: "igop run [-asm -quiet -debug] <gopSrcDir>",
+	UsageLine: "igop run [-version -quiet -debug] <gopSrcDir>",
 	Short:     "Run a program powered by Go+ spx engine",
 }
 
 var (
-	flag      = &Cmd.Flag
-	flagAsm   = flag.Bool("asm", false, "generates `asm` code of Go bytecode backend")
-	flagQuiet = flag.Bool("quiet", false, "don't generate any compiling stage log")
-	flagDebug = flag.Bool("debug", false, "print debug information")
+	flag        = &Cmd.Flag
+	flagAsm     = flag.Bool("asm", false, "generates `asm` code of Go bytecode backend")
+	flagQuiet   = flag.Bool("quiet", false, "don't generate any compiling stage log")
+	flagDebug   = flag.Bool("debug", false, "print debug information")
+	flagVersion = flag.Bool("version", false, "print gop version")
 )
 
 func init() {
@@ -47,6 +51,10 @@ func init() {
 
 func runCmd(cmd *base.Command, args []string) {
 	flag.Parse(args)
+	if *flagVersion {
+		fmt.Println("gop", gop.Version(), runtime.GOOS+"/"+runtime.GOARCH)
+		return
+	}
 	if flag.NArg() < 1 {
 		cmd.Usage(os.Stderr)
 	}
