@@ -7,6 +7,7 @@ require (
 	github.com/goplus/gop v1.0.14
 	github.com/goplus/gox v1.7.10
 	github.com/goplus/igo v0.3.0
+	github.com/goplus/interp v0.1.4
 	github.com/qiniu/x v1.11.5
 	github.com/traefik/yaegi v0.10.0
 )
