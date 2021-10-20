@@ -11,7 +11,7 @@ igop - The Go+ interpreter (still in beta version)
 
 * [yaegi](https://github.com/traefik/yaegi)
 * [gomacro](https://github.com/cosmos72/gomacro)
-* [ssa](https://github.com/goplus/interp)
+* [ssa](https://github.com/goplus/gossa)
 * [igo](https://github.com/goplus/igo)
 
 ## How to build
