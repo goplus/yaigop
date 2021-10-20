@@ -17,11 +17,11 @@
 package run
 
 import (
+	"github.com/goplus/gossa"
 	"github.com/goplus/igop"
-	"github.com/goplus/interp"
 	"github.com/qiniu/x/log"
 
-	_ "github.com/goplus/interp/pkg"
+	_ "github.com/goplus/gossa/pkg"
 )
 
 // -----------------------------------------------------------------------------
@@ -35,7 +35,7 @@ func runDir(srcDir string, asm bool) {
 		panic("not impl")
 		return
 	}
-	interp.RunFile(0, "main.go", code.Data, nil)
+	gossa.RunFile(0, "main.go", code.Data, nil)
 }
 
 // -----------------------------------------------------------------------------
