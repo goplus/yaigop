@@ -1,8 +1,8 @@
 github.com/cosmos72/gomacro v0.0.0-20210624153544-b4935e406a41 h1:4KyZP6hbXqauUCvY+yeq8QCjc4/OM6ssNqIJR/aqqrI=
 github.com/cosmos72/gomacro v0.0.0-20210624153544-b4935e406a41/go.mod h1:h3apSc2xEBPz29JyJ0VRpUUMinufrpAZ3JXhWN8aVB4=
 github.com/goplus/gop v1.0.13/go.mod h1:oo5V2tps5zZxzPXqnO1ENeXOVBIjQnMRI8ZIRCQ72rk=
-github.com/goplus/gop v1.0.37 h1:U7/Asf3IyJBC38DXii56JF5hw94TayUs5Vg6XT5Wi14=
-github.com/goplus/gop v1.0.37/go.mod h1:JMjZXjcfATZdT+1SIU4bXpaXJIvs6xTNVzjI8+XQhRM=
+github.com/goplus/gop v1.0.38 h1:iA45XdLdKzf1N3QqZOJqx99p4GN91oLFeoe1n7PkCNU=
+github.com/goplus/gop v1.0.38/go.mod h1:JMjZXjcfATZdT+1SIU4bXpaXJIvs6xTNVzjI8+XQhRM=
 github.com/goplus/gossa v0.1.5 h1:IgIO+gde3DgTSofXD2Y5wRZw0YDxRBksImqBThYvgC4=
 github.com/goplus/gossa v0.1.5/go.mod h1:1CuYwJeXS/UOSSHl6bNjnzn3EXfsi4OUUvdKaafRQ1I=
 github.com/goplus/gox v1.7.10/go.mod h1:orZ6Mr9qqB4BVaVCMp/cypMtkn0Fp5XUE7e5uqjZATA=
