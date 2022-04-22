@@ -12,6 +12,7 @@ jobs:
       matrix:
         go-version: [1.17.x]
         os: [ubuntu-latest, macos-11]
+        igo: [yaegi, ssa, gomacro, igo]
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
@@ -22,10 +23,4 @@ jobs:
         go-version: ${{ matrix.go-version }}
 
     - name: Build
-      run: go build -v ./...
-
-    - name: Test
-      run: go test -v -coverprofile="coverage.txt" -covermode=atomic ./...
-
-    - name: Codecov
-      uses: codecov/codecov-action@v2
+      run: go build -tags ${{ matrix.igo }} -v ./...
