@@ -10,9 +10,9 @@ igop - The Go+ interpreter (still in beta version)
 
 ## Support multiple engines
 
+* [ssa](https://github.com/goplus/gossa)
 * [yaegi](https://github.com/traefik/yaegi)
 * [gomacro](https://github.com/cosmos72/gomacro)
-* [ssa](https://github.com/goplus/gossa)
 * [igo](https://github.com/goplus/igo)
 
 ## How to build
@@ -20,5 +20,5 @@ igop - The Go+ interpreter (still in beta version)
 ```bash
 git clone git@github.com:goplus/igop.git
 cd igop
-go install -tags yaegi -v ./...   # you can replace `yaegi` to `igo` or other engines
+go install -tags ssa -v ./...   # you can replace `ssa` to `yaegi` or other engines
 ```
