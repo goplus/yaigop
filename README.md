@@ -1,6 +1,7 @@
 igop - The Go+ interpreter (still in beta version)
 ========
 
+[![Build Status](https://github.com/goplus/igop/actions/workflows/go.yml/badge.svg)](https://github.com/goplus/igop/actions/workflows/go.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/goplus/igop)](https://goreportcard.com/report/github.com/goplus/igop)
 [![GitHub release](https://img.shields.io/github/v/tag/goplus/igop.svg?label=release)](https://github.com/goplus/igop/releases)
 [![Playground](https://img.shields.io/badge/playground-Go+-blue.svg)](https://play.goplus.org/)
