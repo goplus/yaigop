@@ -1,5 +1,5 @@
-//go:build yaegi
-// +build yaegi
+//go:build igo
+// +build igo
 
 /*
  Copyright 2020 The GoPlus Authors (goplus.org)
@@ -17,27 +17,27 @@
 package run
 
 import (
-	"github.com/goplus/igop"
-	"github.com/goplus/igop/cmd/igop/internal/lib"
+	"os"
+
+	"github.com/goplus/igo/interp"
+	"github.com/goplus/yaigop"
 	"github.com/qiniu/x/log"
-	"github.com/traefik/yaegi/interp"
-	"github.com/traefik/yaegi/stdlib"
+
+	_ "github.com/goplus/igo/lib"
 )
 
 // -----------------------------------------------------------------------------
 
 func runDir(srcDir string, asm bool) {
-	it := interp.New(interp.Options{})
-	it.Use(stdlib.Symbols)
-	it.Use(lib.Symbols)
-	app, err := igop.CompileDir(it, srcDir)
+	app, err := yaigop.CompileDir(srcDir)
 	if err != nil {
 		log.Fatalln(err)
 	}
 	if asm {
-		panic("not impl")
+		app.Dump(os.Stdout)
+		return
 	}
-	it.Execute(app)
+	interp.New().RunProgram(app)
 }
 
 // -----------------------------------------------------------------------------

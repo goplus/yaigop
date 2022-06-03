@@ -1,4 +1,4 @@
-module github.com/goplus/igop
+module github.com/goplus/yaigop
 
 go 1.16
 

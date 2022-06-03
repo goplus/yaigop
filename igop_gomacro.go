@@ -17,7 +17,7 @@
  limitations under the License.
 */
 
-package igop
+package yaigop
 
 import (
 	"errors"

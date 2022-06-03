@@ -23,7 +23,7 @@ import (
 	"runtime"
 
 	"github.com/goplus/gop"
-	"github.com/goplus/igop/cmd/igop/internal/base"
+	"github.com/goplus/yaigop/cmd/yaigop/internal/base"
 	"github.com/qiniu/x/log"
 )
 

@@ -1,15 +1,12 @@
-//go:build gomacro
-// +build gomacro
+//go:build ssa
+// +build ssa
 
 /*
- Copyright 2021 The GoPlus Authors (goplus.org)
-
+ Copyright 2020 The GoPlus Authors (goplus.org)
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
-
      http://www.apache.org/licenses/LICENSE-2.0
-
  Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -20,25 +17,25 @@
 package run
 
 import (
-	"github.com/cosmos72/gomacro/fast"
-	"github.com/goplus/igop"
+	"github.com/goplus/gossa"
+	"github.com/goplus/yaigop"
 	"github.com/qiniu/x/log"
 
-	_ "github.com/goplus/igop/cmd/igop/internal/lib"
+	_ "github.com/goplus/gossa/pkg"
 )
 
 // -----------------------------------------------------------------------------
 
 func runDir(srcDir string, asm bool) {
-	it := fast.New()
-	app, err := igop.CompileDir(it, srcDir)
+	code, err := yaigop.CompileDir(srcDir)
 	if err != nil {
 		log.Fatalln(err)
 	}
 	if asm {
 		panic("not impl")
+		return
 	}
-	it.RunExpr(app)
+	gossa.RunFile(0, "main.go", code.Data, nil)
 }
 
 // -----------------------------------------------------------------------------

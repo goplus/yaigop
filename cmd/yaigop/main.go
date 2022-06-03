@@ -1,12 +1,12 @@
-//go:build igo
-// +build igo
-
 /*
  Copyright 2020 The GoPlus Authors (goplus.org)
+
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
+
      http://www.apache.org/licenses/LICENSE-2.0
+
  Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -14,30 +14,17 @@
  limitations under the License.
 */
 
-package run
+package main
 
 import (
 	"os"
 
-	"github.com/goplus/igo/interp"
-	"github.com/goplus/igop"
-	"github.com/qiniu/x/log"
-
-	_ "github.com/goplus/igo/lib"
+	"github.com/goplus/yaigop/cmd/yaigop/internal/base"
+	"github.com/goplus/yaigop/cmd/yaigop/internal/run"
 )
 
-// -----------------------------------------------------------------------------
-
-func runDir(srcDir string, asm bool) {
-	app, err := igop.CompileDir(srcDir)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	if asm {
-		app.Dump(os.Stdout)
-		return
-	}
-	interp.New().RunProgram(app)
+func main() {
+	base.Main(run.Cmd, "yaigop", os.Args[1:])
 }
 
 // -----------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 //go:build yaegiast
 // +build yaegiast
 
-package igop
+package yaigop
 
 import (
 	"errors"
