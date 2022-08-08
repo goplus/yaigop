@@ -9,5 +9,5 @@ require (
 	github.com/goplus/gox v1.7.18
 	github.com/goplus/igo v0.3.0
 	github.com/qiniu/x v1.11.7
-	github.com/traefik/yaegi v0.13.0
+	github.com/traefik/yaegi v0.14.1
 )
