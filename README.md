@@ -12,6 +12,7 @@ yaigop - Yet Another Go+ interpreter (still in beta version)
 ## Support multiple engines
 
 * [yaegi](https://github.com/traefik/yaegi)
+* [ssa](github.com/goplus/gossa)
 * [~~gomacro~~](https://github.com/cosmos72/gomacro)
 * [~~igo~~](https://github.com/goplus/igo)
 
